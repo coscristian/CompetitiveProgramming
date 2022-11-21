@@ -16,6 +16,7 @@ int main() {
 
     int t, n;
     lld s;
+    bool flag = false;
     cin >> t;
     while(t--) {
         vector<lld> v, ordered;
@@ -41,11 +42,15 @@ int main() {
                 }else {
                     int last_pos_rep = last_pos;
                     while(true){
-                        last_pos_rep--;
+                        if (!flag)
+                            last_pos_rep--;
                         last = ordered.at(last_pos_rep);
-                        if(value != last) {
+                        if(value != last || flag == true) {
                             cout << value - last << " ";
+                            flag = false;
                             break;
+                        }else {
+                            flag = true;
                         }
                     }
                 }
