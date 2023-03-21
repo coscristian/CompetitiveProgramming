@@ -6,8 +6,13 @@ int main(){
 
 	int i = 0, j = 0;
 	while(scanf("%d %d", &i, &j) != EOF){
-		int max_cycle = 0;
-		for(int k = i; k < j; k++){
+		bool flag = false;
+		if (i > j){
+			swap(i, j);
+			flag = true;	
+		}
+		int max_cycle = 1;
+		for(int k = i; k <= j; k++){
 			int cycle = 1;
 			long long int n = k;
 			while(n != 1){
@@ -19,7 +24,8 @@ int main(){
 				max_cycle = cycle;
 			}
 		}
-		cout << i << " " << j << " " << max_cycle << "\n";
+		if(flag) cout << j << " " << i << " " << max_cycle << "\n";
+		else cout << i << " " << j << " " << max_cycle << "\n";
 	}
 	return 0;
 }
