@@ -6,5 +6,6 @@
         "unordered_map": "cpp",
         "unordered_set": "cpp",
         "string_view": "cpp"
-    }
+    },
+    "zowe.settings.version": 2
 }
