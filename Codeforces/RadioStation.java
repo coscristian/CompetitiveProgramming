@@ -1,4 +1,4 @@
-package ejercicios;
+package Codeforces;
 
 import java.util.ArrayList;
 import java.util.Scanner;

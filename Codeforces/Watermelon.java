@@ -1,4 +1,4 @@
-package ejercicios;
+package Codeforces;
 import java.util.Scanner;
 
 public class Watermelon {
