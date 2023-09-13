@@ -9,17 +9,14 @@ int main(){
         string test; cin >> test;
         int consec = 0, sum = 0, aux = 0;
         for(int i = 0; i < test.size(); i++){
-            if(test[i] == 'O'){
+            if(test[i] == 'O')
                 consec++;
-                aux = consec;
-            }else{
-                sum += consec * (consec + 1) / 2;
+            else
                 consec = 0;
-            }
+            if((i < test.size() - 1 && test[i+1] == 'X') || (i == test.size() - 1))
+                sum += consec * (consec + 1) / 2;
         }
-        cout << sum + aux * (aux + 1) / 2 << endl;
+        cout << sum << endl;
     }
-
-
     return 0;
 }
